@@ -1,0 +1,102 @@
+<html>
+<script src="https://www.gstatic.com/firebasejs/4.6.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDeWlWs6tn-0DKny8fp6nPx4KHGXZW2FhM",
+    authDomain: "encryption-dpadlipsky.firebaseapp.com",
+    databaseURL: "https://encryption-dpadlipsky.firebaseio.com",
+    projectId: "encryption-dpadlipsky",
+    storageBucket: "encryption-dpadlipsky.appspot.com",
+    messagingSenderId: "560090139009"
+  };
+  firebase.initializeApp(config);
+</script>
+<script src = "./index.js"></script>
+<header>
+  <title>Encryption</title>
+</header>
+<style>
+  body{
+    background-color: lightblue;
+  }
+  input{
+    font-family: monospace;
+    /*font-variant: small-caps;*/
+    font-size: 15px;
+    background-color: lightblue;
+  }
+  p{
+    font-family: monospace;
+    /*font-variant: small-caps;*/
+    /*font-size: 20px;*/
+  }
+  h1{
+    text-align: center;
+    font-size: 30px;
+  }
+  h3{
+    font-size: 24px;
+  }
+  textarea{
+    background-color:lightblue;
+    font-family: monospace;
+    /*font-variant: small-caps;*/
+    font-size: 15px;
+    background-color: lightblue;
+  }
+  table{
+    width: 1000px;
+  }
+</style>
+<body>
+  <h1>
+    <p>Message Encrypter</p>
+  </h1>
+  <h3>
+    <p>
+      1. Enter a name, message, and two different numbers from 100 to 1200
+<br>
+      and press the button on the left.
+      <br>
+      <br>
+      REMEMBER THE NAME YOU CHOSE AND PASSCODE GIVEN BELOW!
+      <br>
+      <br>
+      2. Enter the name and passcode on the right and click the button to receive the message at any time.
+      <br>
+    </p>
+  </h3>
+  <table border="0">
+<tbody>
+<tr>
+<td>
+  <input id = "name" placeholder = "Name"></input>
+  <br></br>
+  <textarea id = "message" placeholder= "Message" rows = "20" cols="30"></textarea>
+  <br></br>
+  <input id = "a" placeholder = "Number 100-1200"></input>
+  <br></br>
+  <input id = "b" placeholder= "Number 100-1200"></input>
+  <br></br>
+  <input type = "button"; id = "button"value="PRESS HERE" onclick="buttonClick()"></input>
+
+</td>
+<td>
+  <input id = "nameRec" placeholder = "Name"></input>
+  <br></br>
+  <input id = "passcode" placeholder= "Passcode"></input>
+  <br></br>
+  <input type = "button"; id = "button"value="PRESS HERE" onclick="buttonReceive()"></input>
+</td>
+</tr>
+</tbody>
+</table>
+
+
+<h3>
+<p id = "OUTPUT"></p>
+</h3>
+
+</body>
+</html>
